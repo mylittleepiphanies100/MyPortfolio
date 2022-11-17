@@ -251,101 +251,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
                 
                 
-                <div id="google_translate_element"></div>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en',  layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<h1>Custom styled Google Translate</h1>
-<h2>Including the dropdown!</h2>
-<p>
-  Another method:
-  <a href="https://github.com/wistcc/stylinggt.js">
-    https://github.com/wistcc/stylinggt.js
-  </a>. (Demo: <a href="http://stylinggt.azurewebsites.net">http://stylinggt.azurewebsites.net</a>)
-</p>
-<p>See also: <a href="http://www.techumber.com/make-custom-drop-down-menu-for-google-translate/">this article</a> regarding the Dropdown</p>.
-<p>I'll probably put this on <a href="https://jay.holtslander.ca/?utm_source=codepen&utm_medium=pen-link" target="_blank">my own website</a>.</p>
-
-<div id="google_translate_element"></div>
-                
-                
-               
- <div id='google_translate_element'></div>
- <script>
- function googleTranslateElementInit() {
- new google.translate.TranslateElement({
- pageLanguage: 'en',
- autoDisplay: 'true',
- layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
- }, 'google_translate_element');
+ <style type="text/css">
+ 
+ /*google translate Dropdown */
+ 
+ #google_translate_element select{
+ background:#305bdf;
+ color:#fff;
+ border: none;
+ border-radius:3px;
+ padding:6px 8px
  }
- </script>
- <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
-
-            
-        </footer>
-
-// WORK IN PROGRESS BELOW
-      	
-$('document').ready(function () {
-
-
-		// RESTYLE THE DROPDOWN MENU
-    $('#google_translate_element').on("click", function () {
-
-        // Change font family and color
-        $("iframe").contents().find(".goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 *")
-            .css({
-                'color': '#544F4B',
-                'font-family': 'Roboto',
-								'width':'100%'
-            });
-        // Change menu's padding
-        $("iframe").contents().find('.goog-te-menu2-item-selected').css ('display', 'none');
-			
-				// Change menu's padding
-        $("iframe").contents().find('.goog-te-menu2').css ('padding', '0px');
-      
-        // Change the padding of the languages
-        $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '20px');
-      
-        // Change the width of the languages
-        $("iframe").contents().find('.goog-te-menu2-item').css('width', '100%');
-        $("iframe").contents().find('td').css('width', '100%');
-      
-        // Change hover effects
-        $("iframe").contents().find(".goog-te-menu2-item div").hover(function () {
-            $(this).css('background-color', '#4385F5').find('span.text').css('color', 'white');
-        }, function () {
-            $(this).css('background-color', 'white').find('span.text').css('color', '#544F4B');
-        });
-
-        // Change Google's default blue border
-        $("iframe").contents().find('.goog-te-menu2').css('border', 'none');
-
-        // Change the iframe's box shadow
-        $(".goog-te-menu-frame").css('box-shadow', '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)');
-        
-      
-      
-        // Change the iframe's size and position?
-        $(".goog-te-menu-frame").css({
-            'height': '100%',
-            'width': '100%',
-            'top': '0px'
-        });
-        // Change iframes's size
-        $("iframe").contents().find('.goog-te-menu2').css({
-            'height': '100%',
-            'width': '100%'
-        });
-    });
-});
-
+ 
+ /*google translate link | logo */
+   .goog-logo-link{
+   display:none!important;
+   }
+ .goog-te-gadget{
+ color:transparent!important;
+ }
+ 
+ /* google translate banner-frame */
+ 
+ .goog-te-banner-frame{
+ display:none !important;
+ }
+ 
+ #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+.goog-text-highlight { background: none !important; box-shadow: none !important;}
+ 
+ body{top:0!important;}
+   </style>
        
         <script src="https://unpkg.com/scrollreveal"></script>
 
